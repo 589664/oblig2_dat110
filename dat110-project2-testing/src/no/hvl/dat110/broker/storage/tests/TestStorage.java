@@ -1,6 +1,9 @@
 package no.hvl.dat110.broker.storage.tests;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotEquals;
+import static org.junit.Assert.assertTrue;
 
 import java.util.Set;
 
@@ -8,10 +11,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import no.hvl.dat110.broker.ClientSession;
 import no.hvl.dat110.broker.Storage;
-import no.hvl.dat110.messages.ConnectMsg;
-import no.hvl.dat110.messages.MessageUtils;
 
 public class TestStorage {
 
