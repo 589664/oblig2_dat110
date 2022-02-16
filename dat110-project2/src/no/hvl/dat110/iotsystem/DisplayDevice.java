@@ -8,12 +8,11 @@ import no.hvl.dat110.common.TODO;
 public class DisplayDevice {
 	
 	private static final int COUNT = 10;
+	public static String TOPIC = "temperature";
 		
 	public static void main (String[] args) {
 		
 		System.out.println("Display starting ...");
-		
-		// TODO - START
 				
 		// create a client object and use it to
 		
@@ -24,11 +23,20 @@ public class DisplayDevice {
 		// - unsubscribe from the topic
 		// - disconnect from the broker
 		
-		// TODO - END
+		Client disp = new Client("display","localhost",8080);
+		
+		disp.connect();
+		disp.createTopic(TOPIC);
+		disp.subscribe(TOPIC);
+		
+		for (int i = 0; i < COUNT; i++) {
+			disp.receive();
+		}
+		
+		disp.unsubscribe(TOPIC);
+		disp.disconnect();
 		
 		System.out.println("Display stopping ... ");
-		
-		throw new UnsupportedOperationException(TODO.method());
 		
 	}
 }

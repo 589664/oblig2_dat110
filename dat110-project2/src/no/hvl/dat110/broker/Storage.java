@@ -89,11 +89,13 @@ public class Storage {
 
 		// TODO: add the user as subscriber to the topic
 		
-		Set<String> set = new HashSet<String>(getSubscribers(topic));
+//		Set<String> set = new HashSet<String>(getSubscribers(topic));
+//		
+//		set.add(user);
+//		
+//		subscriptions.put(topic, set);
 		
-		set.add(user);
-		
-		subscriptions.put(topic, set);
+		getSubscribers(topic).add(user);
 		
 	}
 
