@@ -1,5 +1,7 @@
 package no.hvl.dat110.common;
 
+import no.hvl.dat110.messagetransport.Connection;
+
 public abstract class Stopable extends Thread {
 
 	private boolean stop = false;
@@ -33,4 +35,6 @@ public abstract class Stopable extends Thread {
 		Logger.log(name + " stopping");
 
 	}
+	
+	protected void waitConnect(Connection connection) {}
 }

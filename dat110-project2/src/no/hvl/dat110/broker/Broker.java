@@ -51,7 +51,8 @@ public class Broker extends Stopable {
 			}
 	}
 	
-	private void waitConnect(Connection connection) {
+	@Override
+	protected void waitConnect(Connection connection) {
 				
 		Message msg = MessageUtils.receive(connection);
 		
