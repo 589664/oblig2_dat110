@@ -1,4 +1,4 @@
-package no.hvl.dat110.broker.thread;
+package no.hvl.dat110.broker.multithread_and_buffer;
 
 import java.util.ArrayList;
 import java.util.Collections;

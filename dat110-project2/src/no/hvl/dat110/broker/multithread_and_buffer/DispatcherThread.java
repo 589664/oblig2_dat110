@@ -1,4 +1,4 @@
-package no.hvl.dat110.broker.thread;
+package no.hvl.dat110.broker.multithread_and_buffer;
 
 import no.hvl.dat110.common.Logger;
 import no.hvl.dat110.common.Stopable;
